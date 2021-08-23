@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            {% block title %}{% endblock %}
+        </title>
+        <link rel="stylesheet" type="text/css" href="{% static 'ticketing/css/bootstrapt.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'ticketing/css/fontawesome.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'ticketing/css/style.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body dir="rtl">
+        <div class="container" id="container">
+            <div class="jumbotron text-center" id="header">
+                <h1>سامانه فروش بلیط سینما</h1>
+            </div>
+        </div>
+        <div class="row align-items-center" id="toolbar">
+            <div class="col-6">
+                <h2>
+                    {% block toolbar_title %}{% endblock %}
+                </h2>
+            </div>
+        </div>
+        <a class="btn byn-light py-1 px-2" href=" {% url 'ticketing:cinema_path' %}" >
+            <i class="fas fa-building"></i>
+            {% block toolbar_buttens %}{% endblock %}
+        </a>
+            {% block main_content %}{% endblock %}
+            <div class="alert alert-success">
+                <strong>Success!</strong> This alert box could indicate a successful or positive action.
+            </div>
+        <script src="ticketing/js/jquery-3.6.0.min.js"></script>
+        <script src="ticketing/js/bootstrapt.bundle.js"></script>
+        <script src="ticketing/js/fontawesome.js"></script>
+        <script src="ticketing/js/main.js"></script>
+    </body>
+</html>

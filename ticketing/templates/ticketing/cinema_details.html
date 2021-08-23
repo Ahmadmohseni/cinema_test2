@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ movie.name }}</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'ticketing/css/bootstrapt.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'ticketing/css/fontawesome.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'ticketing/css/style.css' %}">
+    </head>
+    <body dir="rtl">
+        <div class="container" id="container">
+            <h1>
+                سامانه فروش بلیط سینما
+            </h1>
+        </div>
+        <div class="row align-items-center" id="toolbar">
+            <div>
+                <a class="btn btn-warning py-1 px-2" href=" {% url "ticketing:cinema_path" %}" >
+                    فهرست سینماها
+                </a>
+            </div>    
+            <h4>
+                {{ cinema.name }}
+            </h4>
+            
+        </div>
+        <div class="col-3">
+            <small class="text-muted">
+               :شهر
+            </small>
+        </div>
+        <div class="col-9">
+            {{ cinema.city }}
+        </div>
+        <div class="col-3">
+            <small class="text-muted">
+               :ظرفیت
+            </small>
+        </div>
+        <div class="col-9">
+            {{ cinema.capacity }}
+            نفر
+        </div>
+        <div class="col-3">
+            <small class="text-muted">
+               :شماره تلفن
+            </small>
+        </div>
+        <div class="col-9">
+            {{ cinema.phone }}
+        </div>
+        <div class="col-3">
+            <small class="text-muted">
+               :آدرس
+            </small>
+        </div>
+        <div class="col-9 item-text-box">
+            {{ cinema.address }}
+        </div>
+        <div class="row align-content-content" id="footer">
+            <div class="clo text-center">
+                ما را در شبکه های اجتماعی دنبال کنید
+            </div>
+        </div>
+        <script src="ticketing/js/jquery-3.6.0.min.js"></script>
+        <script src="ticketing/js/bootstrapt.bundle.js"></script>
+        <script src="ticketing/js/fontawesome.js"></script>
+        <script src="ticketing/js/main.js"></script>
+    </body>
+</html>

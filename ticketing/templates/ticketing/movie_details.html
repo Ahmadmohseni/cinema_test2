@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ movie.name }}</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'ticketing/css/bootstrapt.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'ticketing/css/fontawesome.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'ticketing/css/style.css' %}">
+    </head>
+    <body dir="rtl">
+        <div class="container" id="container">
+            <h1>
+                سامانه فروش بلیط سینما
+            </h1>
+        </div>
+        <div class="row align-items-center" id="toolbar">
+            <div>
+                <a class="btn btn-warning py-1 px-2" href=" {% url 'ticketing:movie_path' %}" >
+                    فهرست فیلم ها
+                </a>
+            </div>    
+            <h4>
+                {{ movie.name }}
+            </h4>
+            
+        </div>
+        <div class="col-3">
+            <small class="text-muted">
+               :کارگردان
+            </small>
+        </div>
+        <div class="col-9">
+            {{ movie.directior }}
+        </div>
+        <div class="col-3">
+            <small class="text-muted">
+               :محصول سال
+            </small>
+        </div>
+        <div class="col-9">
+            {{ movie.year }}
+        </div>
+        <div class="col-3">
+            <small class="text-muted">
+               :مدت زمان
+            </small>
+        </div>
+        <div class="col-9">
+            {{ movie.length }}
+            ساعت
+        </div>
+        <div class="col-3">
+            <small class="text-muted">
+               :داستان فیلم
+            </small>
+        </div>
+        <div class="col-9 item-text-box">
+            {{ movie.discription }}
+        </div>
+        <div class="row align-content-content" id="footer">
+            <div class="clo text-center">
+                ما را در شبکه های اجتماعی دنبال کنید
+            </div>
+        </div>
+        <div class="alert alert-success">
+            <strong>Success!</strong> This alert box could indicate a successful or positive action.
+          </div>
+        <script src="ticketing/js/jquery-3.6.0.min.js"></script>
+        <script src="ticketing/js/bootstrapt.bundle.js"></script>
+        <script src="ticketing/js/fontawesome.js"></script>
+        <script src="ticketing/js/main.js"></script>
+    </body>
+</html>

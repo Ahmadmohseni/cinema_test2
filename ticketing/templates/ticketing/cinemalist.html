@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>فهرست سینما ها</title>
+    </head>
+    <body dir="rtl">
+        <h1>سامانه فروش بلیط سینما</h1>
+        <h2>
+            فهرست سالن های سینما  
+        </h2>
+    </h2>
+    <a href="{% url 'ticketing:movie_path' %}">
+        فهرست فیلم ها
+    </a>
+        {% if cinemas %}
+            <ul>
+                {% for cinema in cinemas %}
+                    <li>
+                    <a href="{% url 'ticketing:cinema_details' cinema_id=cinema.id %}">
+                        {{ cinema }}
+                    </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p style="color: red">
+                متاسفانه سینمایی وجود ندارد
+            </p>
+        {% endif %}
+    </body>
+</html>

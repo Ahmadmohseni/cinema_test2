@@ -1,0 +1,44 @@
+p{
+    color: red ;
+    font-size: 20px;
+    
+}
+.box{
+    background-color:mediumturquoise ;
+    padding-top: 40px;
+    
+    text-align: center;
+}
+
+.imageBox{
+    margin: 5px;
+    background-color: whitesmoke;
+    text-align: center;
+    font-size: 15px;
+    border:1px dashed green;
+    padding:10px
+}
+
+.imageBox img{
+    width: 100%;
+    height: auto;
+}
+
+.btnul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.btnul li{
+    float: left;
+    margin-left: 10px;
+}
+
+.timeBox{
+    margin: 5px;
+    background-color: rosybrown;
+    font-size: 15px;
+    border: seagreen;
+    padding: 10px;
+    text-align: center;
+}
